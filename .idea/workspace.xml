@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f71d6d47-6611-4907-908a-467ace0223d5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/CardDeliveryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CardDeliveryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CardDeliveryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CardDeliveryTest">
+  <component name="RunManager" selected="Gradle.CardDeliveryTest.shouldFillTheForm">
     <configuration name="CardDeliveryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -99,7 +99,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CardDeliveryTest.shouldFillTheFormWithConditions" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CardDeliveryTest.shouldFillTheFormWithConditions (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -124,9 +124,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CardDeliveryTest" />
-        <item itemvalue="Gradle.CardDeliveryTest.shouldFillTheFormWithConditions" />
         <item itemvalue="Gradle.CardDeliveryTest.shouldFillTheForm" />
+        <item itemvalue="Gradle.CardDeliveryTest.shouldFillTheFormWithConditions (1)" />
+        <item itemvalue="Gradle.CardDeliveryTest" />
       </list>
     </recent_temporary>
   </component>

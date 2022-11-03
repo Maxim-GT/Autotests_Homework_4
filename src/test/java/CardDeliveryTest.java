@@ -12,19 +12,19 @@ public class CardDeliveryTest {
 
 
     @BeforeEach
-    void SetUp() {
+    void setUp() {
         open("http://localhost:9999/");
     }
 
-    String generateDate(int days) {
-        return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+    String generateDate(int days, String pattern) {
+        return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern(pattern));
     }
 
     @Test
     void shouldFillTheForm() {
         $("[placeholder= 'Город']").setValue("Абакан");
         $("[class= 'input__control'][placeholder= 'Дата встречи']").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
-        String date = generateDate(3);
+        String date = generateDate(3, "dd.MM.yyyy" );
         $("[class= 'input__control'][placeholder= 'Дата встречи']").setValue(date);
         $("[class= 'input__control'][name= 'name']").setValue("Иван Иванов");
         $("[type= 'tel'][name= 'phone']").setValue("+71234567890");
@@ -40,13 +40,16 @@ public class CardDeliveryTest {
         $("[placeholder= 'Город']").setValue("Аб");
         $("[class= 'menu-item__control']").click();
         $("[class='icon-button icon-button_size_m icon-button_theme_alfa-on-white']").click();
-        String date = generateDate(7);
-        if (LocalDate.now().getMonth().equals(LocalDate.now().plusDays(7).getMonth())) {
-            $$("td").find(exactText("20")).click();
+        String dateMonth = generateDate(7, "MM");
+        if (LocalDate.now().format(DateTimeFormatter.ofPattern("MM")).equals(dateMonth)) {
+            String dateDay = generateDate(7, "dd");
+            $$("td").find(exactText(dateDay)).click();
         } else {
+            String dateDay = generateDate(7, "dd");
             $("[class='calendar__arrow calendar__arrow_direction_right']").click();
-            $$("td").find(exactText("")).click();
+            $$("td").find(exactText(dateDay)).click();
         }
+        String date = generateDate(7, "dd.MM.yyyy");
         $("[class= 'input__control'][name= 'name']").setValue("Иван Иванов");
         $("[type= 'tel'][name= 'phone']").setValue("+71234567890");
         $("[class= 'checkbox__box']").click();
